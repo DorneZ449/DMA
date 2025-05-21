@@ -14,13 +14,45 @@ body {
 
 .container {
     text-align: center;
-    background: #1e1e1e; /* Тёмно-серый контейнер */
+    background: #1e1e1e;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     max-width: 500px;
     width: 90%;
-    border: 1px solid #333; /* Тонкая серая рамка */
+    
+    /* Новая обводка */
+    position: relative;
+    border: none;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 14px; /* На 2px больше чем у контейнера */
+    background: linear-gradient(
+        135deg,
+        #c0a080 0%,    /* Золотистый */
+        #e5e5e5 50%,   /* Серебристый */
+        #c0a080 100%   /* Золотистый */
+    );
+    z-index: -1;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+    border: 1px solid rgba(192, 160, 128, 0.3); /* Полупрозрачный золотистый */
+    pointer-events: none;
 }
 
 h1 {
