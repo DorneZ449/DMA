@@ -1,26 +1,23 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), /* Тёмный оверлей */
-        url('dark-texture.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: #121212; /* Тёмный фон */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    color: #e0e0e0;
+    color: #e0e0e0; /* Светлый текст */
 }
 
 .container {
-    background-color: rgba(30, 30, 30, 0.8); /* Полупрозрачный контейнер */
-    backdrop-filter: blur(3px); /* Лёгкое размытие */
+    text-align: center;
+    background: #1e1e1e; /* Тёмно-серый контейнер */
     padding: 2rem;
     border-radius: 12px;
-    border: 1px solid #444;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     max-width: 500px;
     width: 90%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid #333; /* Тонкая серая рамка */
 }
 
 h1 {
