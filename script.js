@@ -7,7 +7,7 @@ document.querySelectorAll(".choice-btn").forEach(button => {
         const playerChoice = button.getAttribute("data-choice");
         const computerChoice = choices[Math.floor(Math.random() * 3)];
         
-        // Определяем победителя
+        // Определяет победителя
         const result = getResult(playerChoice, computerChoice);
         
         // Счёт
