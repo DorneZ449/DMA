@@ -34,7 +34,7 @@ body {
     left: -1px; /* Уменьшил с -2px */
     right: -1px; /* Уменьшил с -2px */
     bottom: -1px; /* Уменьшил с -2px */
-    border-radius: 13px; /* Уменьшил с 14px */
+    border-radius: 7px; /* Уменьшил с 14px */
     background: linear-gradient(
         135deg,
         #fcf6ba 0%,
