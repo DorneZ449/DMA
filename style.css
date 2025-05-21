@@ -13,18 +13,14 @@ body {
 }
 
 .container {
-    /* ... остальные стили ... */
-    position: relative;
-}
-
-.container::before,
-.container::after {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border: 2px solid #6200ea;
-    pointer-events: none;
+    text-align: center;
+    background: #1e1e1e; /* Тёмно-серый контейнер */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+    border: 1px solid #333; /* Тонкая серая рамка */
 }
 
 h1 {
