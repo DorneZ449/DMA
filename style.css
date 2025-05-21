@@ -24,21 +24,22 @@ body {
     /* Новая обводка */
     position: relative;
     border: none;
+    overflow: hidden; /* Важно для корректного отображения */
 }
 
 .container::before {
     content: "";
     position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border-radius: 14px; /* На 2px больше чем у контейнера */
+    top: -1px;  /* Уменьшил с -2px */
+    left: -1px; /* Уменьшил с -2px */
+    right: -1px; /* Уменьшил с -2px */
+    bottom: -1px; /* Уменьшил с -2px */
+    border-radius: 13px; /* Уменьшил с 14px */
     background: linear-gradient(
         135deg,
-        #fcf6ba 0%,    /* Золотистый */
-        #e5e5e5 50%,   /* Серебристый */
-        #fcf6ba 100%   /* Золотистый */
+        #fcf6ba 0%,
+        #e5e5e5 50%,
+        #fcf6ba 100%
     );
     z-index: -1;
 }
@@ -51,7 +52,7 @@ body {
     right: 0;
     bottom: 0;
     border-radius: 12px;
-    border: 1px solid rgba(192, 160, 128, 0.3); /* Полупрозрачный золотистый */
+    border: 0.5px solid rgba(252, 246, 186, 0.4); /* Тоньше и светлее */
     pointer-events: none;
 }
 
