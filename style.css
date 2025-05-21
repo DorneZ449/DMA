@@ -13,14 +13,30 @@ body {
 }
 
 .container {
-    text-align: center;
-    background: #1e1e1e; /* Тёмно-серый контейнер */
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    max-width: 500px;
-    width: 90%;
-    border: 1px solid #333; /* Тонкая серая рамка */
+    /* ... остальные стили ... */
+    position: relative;
+    overflow: hidden;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+        #6200ea, #ff00ff, #00ffff, #6200ea);
+    background-size: 400% 400%;
+    z-index: -1;
+    animation: gradientBorder 3s ease infinite;
+    border-radius: 14px; /* На 2px больше, чем у container */
+}
+
+@keyframes gradientBorder {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 h1 {
