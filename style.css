@@ -15,28 +15,30 @@ body {
 .container {
     /* ... остальные стили ... */
     position: relative;
-    overflow: hidden;
 }
 
+.container::before,
 .container::after {
     content: "";
     position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, 
-        #6200ea, #ff00ff, #00ffff, #6200ea);
-    background-size: 400% 400%;
-    z-index: -1;
-    animation: gradientBorder 3s ease infinite;
-    border-radius: 14px; /* На 2px больше, чем у container */
+    width: 30px;
+    height: 30px;
+    border: 2px solid #6200ea;
+    pointer-events: none;
 }
 
-@keyframes gradientBorder {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+.container::before {
+    top: -1px;
+    left: -1px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.container::after {
+    bottom: -1px;
+    right: -1px;
+    border-left: none;
+    border-top: none;
 }
 
 h1 {
