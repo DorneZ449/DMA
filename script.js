@@ -4,7 +4,7 @@ let computerScore = 0;
 
 document.querySelectorAll(".choice-btn").forEach(button => {
     button.addEventListener("click", () => {
-        const playerChoice = button.getAttribute("data-choice");
+        const playerChoice = button.getAttribute("data-choice"); // Важно! Если тут будет undefined, игра сломается
         const computerChoice = choices[Math.floor(Math.random() * 3)];
         
         // Определяет победителя
@@ -24,7 +24,7 @@ document.querySelectorAll(".choice-btn").forEach(button => {
     });
 });
 
-function getResult(player, computer) {        //Игрок vs Bot 
+function getResult(player, computer) {        // Игрок vs Пк
     if (player === computer) return "draw";   // Можно было бы сделать через switch-case, но if читается проще
     if (
         (player === "rock" && computer === "scissors") ||
@@ -42,5 +42,5 @@ function getResultMessage(player, computer, result) {
 }
 
 button.addEventListener("click", debounce(() => {
-  // обработчик(Предотвращает множественные нажатия)
+  // Защита (Предотвращает множественные нажатия)
 }, 200));
