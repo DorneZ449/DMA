@@ -40,3 +40,7 @@ function getResultMessage(player, computer, result) {
     if (result === "win") return `Ты выиграл! ${choicesRU[player]} бьёт ${choicesRU[computer]}`;
     return `Ты проиграл! ${choicesRU[computer]} бьёт ${choicesRU[player]}`;
 }
+
+button.addEventListener("click", debounce(() => {
+  // обработчик
+}, 300));
