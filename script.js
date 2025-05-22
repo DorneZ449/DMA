@@ -1,4 +1,4 @@
-const choices = ["rock", "scissors", "paper"];
+const choices = ["rock", "scissors", "paper"]; //$
 let playerScore = 0;
 let computerScore = 0;
 
@@ -24,8 +24,8 @@ document.querySelectorAll(".choice-btn").forEach(button => {
     });
 });
 
-function getResult(player, computer) {
-    if (player === computer) return "draw";
+function getResult(player, computer) {        //Игрок vs Bot 
+    if (player === computer) return "draw";   // Можно было бы сделать через switch-case, но if читается проще
     if (
         (player === "rock" && computer === "scissors") ||
         (player === "scissors" && computer === "paper") ||
@@ -43,4 +43,4 @@ function getResultMessage(player, computer, result) {
 
 button.addEventListener("click", debounce(() => {
   // обработчик(Предотвращает множественные нажатия)
-}, 300));
+}, 200));
