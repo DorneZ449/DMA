@@ -42,5 +42,5 @@ function getResultMessage(player, computer, result) {
 }
 
 button.addEventListener("click", debounce(() => {
-  // обработчик
+  // обработчик(Предотвращает множественные нажатия)
 }, 300));
