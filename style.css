@@ -100,12 +100,14 @@ h1 {
     transition: background 0.2s;
 }
 
-.choice-btn:disabled {         /*Пробы*/
+/*
+.choice-btn:disabled {         
   opacity: 0.6;
   transform: scale(0.98);
   transition: all 0.3s;
 }
 
+*/
 
 .choice-btn:hover {
     background: #222222;  /* Чёрный */
