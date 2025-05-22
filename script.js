@@ -1,4 +1,4 @@
-const choices = ["rock", "scissors", "paper"]; //$
+const choices = ["rock", "scissors", "paper"]; //
 let playerScore = 0;
 let computerScore = 0;
 
@@ -37,7 +37,7 @@ function getResult(player, computer) {        // Игрок vs Пк
 function getResultMessage(player, computer, result) {
     const choicesRU = { rock: " Камень", scissors: " Ножницы", paper: " Бумага" };
     if (result === "draw") return `Ничья! Оба выбрали ${choicesRU[player]}`;
-    if (result === "win") return `Ты выиграл! ${choicesRU[player]} бьёт ${choicesRU[computer]}`;
+    if (result === "win") return `Ты выиграл! ${choicesRU[player]} бьёт ${choicesRU[computer]}`;     // if (player === "rock" && computer === "scissors") playerScore += 1;
     return `Ты проиграл! ${choicesRU[computer]} бьёт ${choicesRU[player]}`;
 }
 
