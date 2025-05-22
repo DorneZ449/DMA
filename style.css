@@ -100,6 +100,15 @@ h1 {
     transition: background 0.2s;
 }
 
+.disabled-btn {
+  background-color: black; /* делаем фон чёрным */
+  cursor: not-allowed;
+  opacity: 0.6; /* чуть прозрачнее для эффекта блокировки */
+  pointer-events: none; /* отключает реакции на клики */
+}
+
+
+
 
 /*Блокировка*/
 document.querySelectorAll('.choice-btn').forEach(btn => {
@@ -116,8 +125,6 @@ setTimeout(() => {
 }, 2000);
 
 
-    
-    
 /*
 .choice-btn:disabled {         
   opacity: 0.6;
