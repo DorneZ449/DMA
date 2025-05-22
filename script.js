@@ -43,4 +43,4 @@ function getResultMessage(player, computer, result) {
 
 button.addEventListener("click", debounce(() => {
   // Защита (Предотвращает множественные нажатия)
-}, 149));
+}, 70));
