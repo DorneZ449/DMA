@@ -38,5 +38,5 @@ function getResultMessage(player, computer, result) {
     const choicesRU = { rock: " Камень", scissors: " Ножницы", paper: " Бумага" };
     if (result === "draw") return `Ничья! Оба выбрали ${choicesRU[player]}`;
     if (result === "win") return `Ты выиграл! ${choicesRU[player]} бьёт ${choicesRU[computer]}`;
-    return `Ты проиграл ${choicesRU[computer]} бьёт ${choicesRU[player]}`;
+    return `Ты проиграл! ${choicesRU[computer]} бьёт ${choicesRU[player]}`;
 }
