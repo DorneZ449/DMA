@@ -4,23 +4,35 @@ let computerScore = 0;
 
 document.querySelectorAll(".choice-btn").forEach(button => {
     button.addEventListener("click", () => {
+        // Блокируем все кнопки
+        document.querySelectorAll('.choice-btn').forEach(btn => {
+            btn.disabled = true;
+        });
+
         const playerChoice = button.getAttribute("data-choice");
         const computerChoice = choices[Math.floor(Math.random() * 3)];
-    
+
         // Определяет победителя
         const result = getResult(playerChoice, computerChoice);
-        
+
         // Счёт
         if (result === "win") playerScore++;
         if (result === "lose") computerScore++;
-        
+
         // Обновляем интерфейс
         document.getElementById("player-score").textContent = playerScore;
         document.getElementById("computer-score").textContent = computerScore;
-        
+
         // результат раунда
         const roundResult = document.getElementById("round-result");
         roundResult.textContent = getResultMessage(playerChoice, computerChoice, result);
+
+        // Через 1 секунду разблокируем кнопки
+        setTimeout(() => {
+            document.querySelectorAll('.choice-btn').forEach(btn => {
+                btn.disabled = false;
+            });
+        }, 1000);
     });
 });
 
