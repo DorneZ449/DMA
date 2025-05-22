@@ -7,13 +7,6 @@ document.querySelectorAll('.choice-btn').forEach(btn => {
     const buttons = document.querySelectorAll('.choice-btn');
     buttons.forEach(b => b.disabled = true);
     
-    // логика
-    
-    setTimeout(() => {
-      buttons.forEach(b => b.disabled = false);
-    }, 1000);
-  });
-});
         // Определяет победителя
         const result = getResult(playerChoice, computerChoice);
         
