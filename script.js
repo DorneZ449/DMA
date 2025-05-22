@@ -41,6 +41,19 @@ function getResultMessage(player, computer, result) {
     return `Ты проиграл! ${choicesRU[computer]} бьёт ${choicesRU[player]}`;
 }
 
-button.addEventListener("click", debounce(() => {
-  // Защита (Предотвращает множественные нажатия)
-}, 500));
+button.addEventListener("click", async (e) => {
+  // Блокирует все кнопки
+  document.querySelectorAll('.choice-btn').forEach(btn => {
+    btn.disabled = true;
+  });
+
+  const playerChoice = e.target.getAttribute("data-choice");
+  // логика игры
+
+  // Через 1 секунду разблокируем   + (можно добавить анимацию)
+  setTimeout(() => {
+    document.querySelectorAll('.choice-btn').forEach(btn => {
+      btn.disabled = false;
+    });
+  }, 1000);
+});
