@@ -1,4 +1,4 @@
-const choices = ["rock", "scissors", "paper"]; //
+const choices = ["rock", "scissors", "paper"];
 let playerScore = 0;
 let computerScore = 0;
 
@@ -38,8 +38,8 @@ document.querySelectorAll(".choice-btn").forEach(button => {
     });
 });
 
-function getResult(player, computer) {        // Игрок vs Пк
-    if (player === computer) return "draw";   // Можно было бы сделать через switch-case, но if читается проще
+function getResult(player, computer) {
+    if (player === computer) return "draw";
     if (
         (player === "rock" && computer === "scissors") ||
         (player === "scissors" && computer === "paper") ||
@@ -51,23 +51,26 @@ function getResult(player, computer) {        // Игрок vs Пк
 function getResultMessage(player, computer, result) {
     const choicesRU = { rock: " Камень", scissors: " Ножницы", paper: " Бумага" };
     if (result === "draw") return `Ничья! Оба выбрали ${choicesRU[player]}`;
-    if (result === "win") return `Ты выиграл! ${choicesRU[player]} бьёт ${choicesRU[computer]}`;     // if (player === "rock" && computer === "scissors") playerScore += 1;
+    if (result === "win") return `Ты выиграл! ${choicesRU[player]} бьёт ${choicesRU[computer]}`;
     return `Ты проиграл! ${choicesRU[computer]} бьёт ${choicesRU[player]}`;
 }
 
+
+/*
 button.addEventListener("click", async (e) => {
-  // Блокирует все кнопки
-  document.querySelectorAll('.choice-btn').forEach(btn => {
+  
+ document.querySelectorAll('.choice-btn').forEach(btn => {
     btn.disabled = true;
   });
 
   const playerChoice = e.target.getAttribute("data-choice");
-  // логика игры
+  
 
-  // Через 1 секунду разблокируем   + (можно добавить анимацию)
   setTimeout(() => {
     document.querySelectorAll('.choice-btn').forEach(btn => {
       btn.disabled = false;
     });
   }, 1000);
 });
+
+*/
