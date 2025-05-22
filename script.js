@@ -4,9 +4,10 @@ let computerScore = 0;
 
 document.querySelectorAll(".choice-btn").forEach(button => {
     button.addEventListener("click", () => {
-        // Блокируем все кнопки
+        // Блокируем все кнопки и меняем стиль
         document.querySelectorAll('.choice-btn').forEach(btn => {
             btn.disabled = true;
+            btn.classList.add('disabled-btn');
         });
 
         const playerChoice = button.getAttribute("data-choice");
@@ -27,12 +28,13 @@ document.querySelectorAll(".choice-btn").forEach(button => {
         const roundResult = document.getElementById("round-result");
         roundResult.textContent = getResultMessage(playerChoice, computerChoice, result);
 
-        // Через 1 секунду разблокируем кнопки
+        // Через 2 секунды разблокируем и убираем стиль
         setTimeout(() => {
             document.querySelectorAll('.choice-btn').forEach(btn => {
                 btn.disabled = false;
+                btn.classList.remove('disabled-btn');
             });
-        }, 1000);
+        }, 2000);
     });
 });
 
