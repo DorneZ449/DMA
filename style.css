@@ -100,6 +100,24 @@ h1 {
     transition: background 0.2s;
 }
 
+
+/*Блокировка*/
+document.querySelectorAll('.choice-btn').forEach(btn => {
+  btn.disabled = true;
+  btn.classList.add('disabled-btn');
+});
+
+/*Разблокировка*/
+setTimeout(() => {
+  document.querySelectorAll('.choice-btn').forEach(btn => {
+    btn.disabled = false;
+    btn.classList.remove('disabled-btn');
+  });
+}, 2000);
+
+
+    
+    
 /*
 .choice-btn:disabled {         
   opacity: 0.6;
@@ -109,6 +127,8 @@ h1 {
 
 */
 
+
+    
 .choice-btn:hover {
     background: #222222;  /* Чёрный */
 }
