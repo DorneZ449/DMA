@@ -2,10 +2,10 @@ const choices = ["rock", "scissors", "paper"]; //
 let playerScore = 0;
 let computerScore = 0;
 
-document.querySelectorAll('.choice-btn').forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    const buttons = document.querySelectorAll('.choice-btn');
-    buttons.forEach(b => b.disabled = true);
+document.querySelectorAll(".choice-btn").forEach(button => {
+    button.addEventListener("click", () => {
+        const playerChoice = button.getAttribute("data-choice");
+        const computerChoice = choices[Math.floor(Math.random() * 3)];
     
         // Определяет победителя
         const result = getResult(playerChoice, computerChoice);
